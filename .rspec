@@ -1,0 +1,4 @@
+--format documentation
+--color
+--exclude-pattern spec/applications/**/*.rb
+--require spec_helper
