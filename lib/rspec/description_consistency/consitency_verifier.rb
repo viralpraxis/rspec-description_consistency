@@ -44,10 +44,11 @@ module RSpec
         method_name = description[1..].to_sym
 
         if description.start_with?('#')
-          klass.instance_methods.include?(method_name)
-        elsif description.start_with?('#') && include_private
-          klass.private_instance_methods.include?(method_name) ||
-            (klass.respond_to?(:attribute_names) && klass.attribute_names.include?(method_name.to_s))
+          return true if klass.instance_methods.include?(method_name)
+          return false unless include_private
+          return true if klass.private_instance_methods.include?(method_name)
+
+          klass.respond_to?(:attribute_names) && klass.attribute_names.include?(method_name.to_s)
         elsif description.start_with?('.')
           correct_class_method?(method_name, klass, include_private: include_private)
         end
