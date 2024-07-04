@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.0.3] - 2024-07-04
+
+- Fix invalid private method verification [(#3)](https://github.com/viralpraxis/rspec-description_consistency/pull/3)
+
 ## [1.0.2] - 2024-07-04
 
 - Add support for `ActiveRecord` attributes [(#2)](https://github.com/viralpraxis/rspec-description_consistency/pull/2)
