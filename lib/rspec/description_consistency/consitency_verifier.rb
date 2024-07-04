@@ -44,23 +44,23 @@ module RSpec
         method_name = description[1..].to_sym
 
         if description.start_with?('#') && include_private
-          klass.method_defined?(method_name) || klass.private_method_defined?(method_name)
+          klass.instance_methods.include?(method_name) || klass.private_instance_methods.include?(method_name)
         elsif description.start_with?('#')
-          klass.method_defined?(method_name)
+          klass.instance_methods.include?(method_name)
         elsif description.start_with?('.')
           correct_class_method?(method_name, klass, include_private: include_private)
         end
       end
 
       def correct_class_method?(method_name, klass, include_private:)
-        klass.singleton_class.method_defined?(method_name) ||
+        klass.singleton_class.instance_methods.include?(method_name) ||
           (include_private && klass.singleton_class.private_instance_methods.include?(method_name)) ||
           activesupport_concern?(method_name, klass)
       end
 
       def activesupport_concern?(method_name, klass)
         if klass.is_a?(Module) && klass.const_defined?(:ClassMethods) &&
-           klass.const_get(:ClassMethods).method_defined?(method_name)
+           klass.const_get(:ClassMethods).instance_methods.include?(method_name)
           true
         else
           Object.const_defined?(:ActiveSupport) && ::ActiveSupport.const_defined?(:Concern) &&
