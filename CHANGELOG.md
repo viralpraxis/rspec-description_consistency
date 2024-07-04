@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.0.2] - 2024-07-04
+
+- Add support for `ActiveRecord` attributes [(#2)](https://github.com/viralpraxis/rspec-description_consistency/pull/2)
+
 ## [1.0.1] - 2024-07-04
 
 - Fix incorrect instance method check in case of dynamically defined methods [(#1)](https://github.com/viralpraxis/rspec-description_consistency/pull/1)
