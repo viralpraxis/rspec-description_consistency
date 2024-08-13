@@ -45,10 +45,9 @@ module RSpec
 
         if description.start_with?('#')
           return true if klass.instance_methods.include?(method_name)
-          return false unless include_private
-          return true if klass.private_instance_methods.include?(method_name)
+          return true if klass.respond_to?(:attribute_names) && klass.attribute_names.include?(method_name.to_s)
 
-          klass.respond_to?(:attribute_names) && klass.attribute_names.include?(method_name.to_s)
+          include_private && klass.private_instance_methods.include?(method_name)
         elsif description.start_with?('.')
           correct_class_method?(method_name, klass, include_private: include_private)
         end
