@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.0.4] - 2024-08-13
+
+- Fix `ActiveModel` attribute misdetection [(#4)](https://github.com/viralpraxis/rspec-description_consistency/pull/4)
+
 ## [1.0.3] - 2024-07-04
 
 - Fix invalid private method verification [(#3)](https://github.com/viralpraxis/rspec-description_consistency/pull/3)
