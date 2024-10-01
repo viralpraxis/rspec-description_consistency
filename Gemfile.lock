@@ -73,10 +73,10 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rspec-description_consistency!
-  rubocop (~> 1.21)
+  rubocop
   rubocop-rake
   rubocop-rspec
-  rubocop-thread_safety (~> 0.5.1)
+  rubocop-thread_safety
   simplecov
 
 BUNDLED WITH
