@@ -10,5 +10,5 @@ gem 'rspec', '~> 3.0'
 gem 'rubocop', '~> 1.21'
 gem 'rubocop-rake'
 gem 'rubocop-rspec'
-gem 'rubocop-thread_safety'
+gem 'rubocop-thread_safety', '~> 0.5.1'
 gem 'simplecov', require: false, group: :test

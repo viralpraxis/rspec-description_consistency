@@ -76,7 +76,7 @@ DEPENDENCIES
   rubocop (~> 1.21)
   rubocop-rake
   rubocop-rspec
-  rubocop-thread_safety
+  rubocop-thread_safety (~> 0.5.1)
   simplecov
 
 BUNDLED WITH
