@@ -53,8 +53,6 @@ GEM
       rubocop (~> 1.0)
     rubocop-rspec (3.0.5)
       rubocop (~> 1.61)
-    rubocop-thread_safety (0.5.1)
-      rubocop (>= 0.92.0)
     ruby-progressbar (1.13.0)
     simplecov (0.22.0)
       docile (~> 1.1)
@@ -76,7 +74,6 @@ DEPENDENCIES
   rubocop
   rubocop-rake
   rubocop-rspec
-  rubocop-thread_safety
   simplecov
 
 BUNDLED WITH

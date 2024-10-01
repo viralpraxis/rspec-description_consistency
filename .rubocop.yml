@@ -1,7 +1,6 @@
 require:
   - rubocop-rake
   - rubocop-rspec
-  - rubocop-thread_safety
 
 AllCops:
   TargetRubyVersion: 3.0
