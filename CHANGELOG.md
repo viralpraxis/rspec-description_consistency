@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+## [1.1.0] - 2024-11-28
+
+- Do not release `StringIO` instances. [(#7)](https://github.com/viralpraxis/rspec-description_consistency/pull/7)
+
 ## [1.0.4] - 2024-08-13
 
 - Fix `ActiveModel` attribute misdetection [(#4)](https://github.com/viralpraxis/rspec-description_consistency/pull/4)
