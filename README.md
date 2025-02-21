@@ -6,25 +6,26 @@ One of the basic RSpec [best practices](https://www.betterspecs.org) advises usi
 # star.rb
 
 class Star
-  def self.build(...)
-    ...
+  def self.build(*args, **kwargs)
+    '?'
   end
 
   def shape
-    ...
+    '?'
   end
+end
 ```
 
 ```ruby
 # star_spec.rb
 
 RSpec.describe Star do
-  describe ".build" do
-    ...
+  describe '.build' do
+    '?'
   end
 
-  describe "#shape" do
-    ...
+  describe '#shape' do
+    '?'
   end
 end
 ```
@@ -72,16 +73,16 @@ end
 By default, descriptions are matched against public and protected methods. If you want to indicate that a specific `describe` refers to a private method you can add `private` flag:
 
 ```ruby
-describe "#some_private_method", :private do # or `private: true`
-  ...
+describe '#some_private_method', :private do # or `private: true`
+  '?'
 end
 ```
 
 You can disable consistency verification completely by specifying `description_consistency: false` for `describe` block:
 
 ```ruby
-describe ".this_method_will_not_be_checked", description_consistency: false do
-  ...
+describe '.this_method_will_not_be_checked', description_consistency: false do
+  '?'
 end
 ```
 
